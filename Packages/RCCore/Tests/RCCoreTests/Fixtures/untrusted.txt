@@ -1,0 +1,1 @@
+Error: Workspace not trusted. Please run `claude` in /Users/nathan/github.com/nbw/claude-rc-controller first to review and accept the workspace trust dialog.

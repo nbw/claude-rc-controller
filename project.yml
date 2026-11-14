@@ -1,0 +1,29 @@
+name: ClaudeRCController
+options:
+  bundleIdPrefix: com.nbw
+  deploymentTarget:
+    macOS: "14.0"
+packages:
+  RCCore:
+    path: Packages/RCCore
+targets:
+  ClaudeRCController:
+    type: application
+    platform: macOS
+    sources: [App]
+    dependencies:
+      - package: RCCore
+    scheme: {}
+    settings:
+      base:
+        PRODUCT_NAME: Claude RC Controller
+        PRODUCT_BUNDLE_IDENTIFIER: com.nbw.claude-rc-controller
+        SWIFT_VERSION: "5"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_LSUIElement: YES
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        ENABLE_HARDENED_RUNTIME: NO
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"

@@ -1,0 +1,107 @@
+[bridge] no session-anchored default-branch evidence — omitting requested branch 'main' from outcomes.branches; the remote session will work on a generated branch instead. Run 'git remote set-head origin -a' in the repo (or supply defaultBranch via the SDK) to restore branch continuity.
+
+·|· Connecting · q · main
+[1A[J·✔︎· Connected · q · main
+    Capacity: 0/32 · New sessions will be created in the current directory
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[7A[J·✔︎· Connected · q · main
+    Capacity: 0/32 · New sessions will be created in the current directory
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[7A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=cliAttached]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=cliAttached]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J[13:45:10] Shutting down 1 active session(s)…
+·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+    ]8;;https://claude.ai/code/session_014DEVEepMqoN6codyYJXJTd?from=clinathans-laptop-silly-comet]8;;
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
+[8A[J[13:45:10] Environment preserved. Restart `claude remote-control` to reconnect existing sessions.
+·✔︎· Connected · q · main
+    Capacity: 1/32 · New sessions will be created in the current directory
+
+Continue coding in the Claude mobile app or https://claude.ai/code?environment=env_01AYJsf2oB2Mja4hXbJnT6TD
+Or ask Claude to work in this folder from your projects on claude.ai
+space to show QR code · w to toggle spawn mode
