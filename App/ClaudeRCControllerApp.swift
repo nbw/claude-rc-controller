@@ -6,10 +6,20 @@ struct ClaudeRCControllerApp: App {
 
     var body: some Scene {
         MenuBarExtra {
-            PanelView()
+            PanelView(model: appDelegate.model)
         } label: {
-            Image(systemName: "antenna.radiowaves.left.and.right")
+            MenuBarIcon(model: appDelegate.model)
         }
         .menuBarExtraStyle(.window)
+    }
+}
+
+struct MenuBarIcon: View {
+    @ObservedObject var model: AppModel
+
+    var body: some View {
+        Image(systemName: model.hasProblem
+            ? "exclamationmark.triangle"
+            : "antenna.radiowaves.left.and.right")
     }
 }
