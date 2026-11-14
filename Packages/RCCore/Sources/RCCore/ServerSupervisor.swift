@@ -17,7 +17,8 @@ public final class ServerSupervisor: ObservableObject {
     private let launcher: ProcessLauncher
     private let clock: SupervisorClock
     private let inspector: ProcessInspector
-    private let log: (String) -> Void
+    private let log: (String, LogEntry) -> Void
+    private let onLiveChange: ([LiveProcess]) -> Void
 
     private var runs: [UUID: Run] = [:]
 
@@ -45,16 +46,22 @@ public final class ServerSupervisor: ObservableObject {
         }
     }
 
+    /// - Parameters:
+    ///   - log: receives the repo path and an entry for each event and output line.
+    ///   - onLiveChange: receives every live server's pid and repo path whenever
+    ///     that set changes. The app writes it to `pids.json` for orphan cleanup.
     public init(
         launcher: ProcessLauncher,
         clock: SupervisorClock = SystemClock(),
         inspector: ProcessInspector = SystemProcessInspector(),
-        log: @escaping (String) -> Void = { _ in }
+        log: @escaping (String, LogEntry) -> Void = { _, _ in },
+        onLiveChange: @escaping ([LiveProcess]) -> Void = { _ in }
     ) {
         self.launcher = launcher
         self.clock = clock
         self.inspector = inspector
         self.log = log
+        self.onLiveChange = onLiveChange
     }
 
     // MARK: Public
@@ -138,6 +145,7 @@ public final class ServerSupervisor: ObservableObject {
             statuses[id] = .stopped
         }
         runs.removeAll()
+        publishLive()
 
         for pid in pids {
             inspector.send(SIGTERM, to: pid)
@@ -180,12 +188,13 @@ public final class ServerSupervisor: ObservableObject {
         } catch {
             run.process = nil
             let message = "Cannot start: \(error)"
-            log(message)
+            log(run.repo.path, .event(message))
             scheduleRetry(id, lastError: message)
             return
         }
-        log("start \(run.repo.path)")
+        log(run.repo.path, .event("start"))
         setStatus(id, .starting)
+        publishLive()
     }
 
     private func retryFired(_ id: UUID) {
@@ -248,7 +257,7 @@ public final class ServerSupervisor: ObservableObject {
             run.process?.terminate()
         case let .other(line):
             run.lastLine = line
-            log(line)
+            log(run.repo.path, .output(line))
         }
     }
 
@@ -270,11 +279,12 @@ public final class ServerSupervisor: ObservableObject {
             handle(event, id, run)
         }
         run.process = nil
+        publishLive()
         run.killTimer?.cancel()
         run.killTimer = nil
         run.stableTimer?.cancel()
         run.stableTimer = nil
-        log("exit \(code)")
+        log(run.repo.path, .event("exit \(code)"))
 
         switch statuses[id] ?? .stopped {
         case .stopping:
@@ -350,5 +360,12 @@ public final class ServerSupervisor: ObservableObject {
 
     private func setStatus(_ id: UUID, _ status: ServerStatus) {
         statuses[id] = status
+    }
+
+    private func publishLive() {
+        let live = runs.values.compactMap { run in
+            run.process.map { LiveProcess(pid: $0.pid, path: run.repo.path) }
+        }
+        onLiveChange(live)
     }
 }

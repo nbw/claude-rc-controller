@@ -6,6 +6,8 @@ public protocol ProcessInspector {
     func isAlive(_ pid: Int32) -> Bool
     func send(_ signal: Int32, to pid: Int32)
     func sleep(_ seconds: TimeInterval)
+    /// Full command line of a pid, or nil if it cannot be read.
+    func commandLine(of pid: Int32) -> String?
 }
 
 public struct SystemProcessInspector: ProcessInspector {
@@ -21,6 +23,25 @@ public struct SystemProcessInspector: ProcessInspector {
 
     public func sleep(_ seconds: TimeInterval) {
         Thread.sleep(forTimeInterval: seconds)
+    }
+
+    public func commandLine(of pid: Int32) -> String? {
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/bin/ps")
+        process.arguments = ["-o", "command=", "-p", String(pid)]
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = FileHandle.nullDevice
+        do {
+            try process.run()
+        } catch {
+            return nil
+        }
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        process.waitUntilExit()
+        let text = String(decoding: data, as: UTF8.self)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        return text.isEmpty ? nil : text
     }
 }
 

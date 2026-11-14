@@ -102,6 +102,7 @@ final class FakeInspector: ProcessInspector {
     var alive: Set<Int32> = []
     /// Pids that ignore SIGTERM.
     var stubborn: Set<Int32> = []
+    var commandLines: [Int32: String] = [:]
     private(set) var signals: [(signal: Int32, pid: Int32)] = []
     private(set) var slept: TimeInterval = 0
 
@@ -118,6 +119,10 @@ final class FakeInspector: ProcessInspector {
 
     func sleep(_ seconds: TimeInterval) {
         slept += seconds
+    }
+
+    func commandLine(of pid: Int32) -> String? {
+        commandLines[pid]
     }
 }
 
